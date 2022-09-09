@@ -1,0 +1,334 @@
+::before ::after {
+  box-sizing: border-box;
+}
+body {
+  
+  align-items: center;
+  place-content: center;
+}
+.ticTc {
+  align-content: center;
+  text-align: center;
+  font: 100;
+  color: #14202d;
+}
+h1{
+  color: #fff;
+}
+.header {
+  color: #14202d;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.AppHeader {
+  background-color: rgb(0, 79, 128);
+  height: 170px;
+  color: antiquewhite;
+  padding: 10px;
+  width: 1040px;
+  text-align: center;
+  text-transform: capitalize;
+  border-color: #14202d;
+  border-width: 2px;
+  border-style: solid;
+}
+.Nav {
+  background-color: #14202d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.Site-title {
+  font-size: 2rem;
+}
+.Nav ul {
+  padding: 0;
+  margin: 0; 
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.Nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.Nav li.active {
+  background-color: blue;
+}
+
+.Nav li:hover {
+  background-color: #777;
+}
+.board {
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: rgb(250, 248, 248);
+  align-content: center;
+  place-content: center;
+}
+
+.gridCell {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #14202d;
+  cursor: pointer;
+}
+.bodyMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gridCell:hover {
+  background-color: rgb(0, 79, 128);
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.13);
+  align-items: center;
+  color: red;
+  font-size: 3rem;
+  flex-direction: column;
+}
+
+.winning-message button {
+  font-size: 3rem;
+  background-color: rgb(245, 10, 10);
+  border: 1px solid black;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.winning-message button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.winning-message.show {
+  display: flex;
+}
+.winning-message.draw {
+  display: flex;
+}
+
+.display-Result {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: larger;
+  place-content: center;
+  place-items: center;
+}
+.display-Result .X-Wins,
+.O-Wins {
+  width: 80%;
+  /* height: 50px; */
+  background-color: rgb(245, 220, 220);
+  color: #14202d;
+  justify-content: center;
+  padding: 10px;
+  margin: 2%;
+  border-radius: 20%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.display-Result .O-Wins {
+  text-align: left;
+  align-content: center;
+  /* direction: ltr; */
+}
+.display-Result .X-Wins {
+  text-align: right;
+}
+.X {
+  width: 30px;
+  /* height: 35px; */
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10%;
+  border: 1px solid black;
+  padding: 0px;
+}
+
+.O {
+  /* position: relative;
+    left: 180px;
+    top:1px; */
+  width: 30px;
+  /* height: 35px; */
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  justify-content: left;
+  border-radius: 10%;
+  border: 1px solid black;
+}
+
+.reSet {
+  color: #14202d;
+  background-color: white;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.reSet:hover {
+  background-color: red;
+}
+.About{
+  background-color: #e8460c;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 390px;
+  border-color: #14202d;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+}
+.MarvelImg{
+  width: 300px;
+  margin: 0;
+  border-radius: 20px;
+  margin-bottom: 0;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.MarvelImg:hover{
+  opacity: 0.3;
+}
+
+
+.about-info{
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline;
+}
+.about-info h2{
+  margin-top: 0;
+  margin-bottom:0;
+}
+
+.about-info2 button{
+  margin-top: 20px;
+  color:#14202d;
+  background-color:white;
+  width: 100%;
+  border-radius: 20px;
+}
+.about-info3{
+  margin-left: 4px;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: small;
+}
+.about-info3 h2{
+  margin-bottom: 4px;
+  color: #fff;
+}
+.footerr{
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  place-content: center;
+  justify-content: center;
+  width: 297px;
+  height: 50px;
+  background-color: #14202d;
+  border-color: #14202d;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
+}
+.footerr img{
+  height: 40px;
+ 
+}
+small{
+  color: black;
+}
+
+.convertPage{
+  margin-left: 70px;
+  color: black;
+  display: grid;
+  width: 900px;
+  grid-template-columns: repeat(4, auto);
+  border-color: #14202d;
+  border-width: 2px;
+  border-style: solid;
+  align-items: center;
+  
+}
+.output{
+  padding: 4px;
+}
+button{
+  color: #fff;
+  background-color: #14202d;
+}
+input{
+  border-width: 2px;
+  border-style: solid;
+  align-items: center;
+  background-color: bisque;
+}
+button:hover{
+  background-color: #e8460c;
+}
+.converts{
+  color: #14202d;
+  height: 50px;
+  border-width: 3px;
+  border-style: solid;
+  align-items: center;
+  place-content: center;
+  
+}
+
+.convertss{
+  margin-top: 10px;
+  color: #14202d;
+  height: auto;
+  border-width: 3px;
+  border-style: solid;
+  align-items: center;
+ text-align: left;
+ text-transform: capitalize;
+
+}
+.out{
+  color: #14202d;
+  
+}
