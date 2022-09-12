@@ -29,8 +29,8 @@ function handleOnChange(index){
           value={Text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button onClick={Todosets} >Add ToDo</button>
-        <button onClick={ClearToDos}>Clear Completed</button>
+        <button className="todobutton" onClick={Todosets} >Add ToDo</button>
+        <button className="todobutton" onClick={ClearToDos}>Clear Completed</button>
       </div>
       <div className="convertss">
         

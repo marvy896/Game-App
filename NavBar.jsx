@@ -15,6 +15,9 @@ export default function NavBar() {
               <a href ="/todo">ToDo List</a>
             </li>
             <li>
+              <a href ="/quizStart">Quiz</a>
+            </li>
+            <li>
             <a href="/about">About</a>
             </li>
         </ul>

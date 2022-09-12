@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 import MainGame from "./MainGame";
 import Converter from "./converter";
 import Todo from "./todo";
+import QuizStart from "./quizStart";
+import Quiz from "./quiz";
 
 export default function App() {
   let component;
@@ -16,6 +18,12 @@ export default function App() {
       break;
       case "/todo":
       component = <Todo />;
+      break;
+      case "/quizStart":
+      component = <QuizStart />;
+      break;
+      case "/quiz":
+      component = <Quiz />;
       break;
     case "/about":
       component = <About />;
