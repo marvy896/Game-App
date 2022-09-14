@@ -33,7 +33,7 @@ export default function Converter() {
     <div>
       <h2>Unit Converter</h2>
       <div className="convertPage">
-        <div className="converts">Centimeters</div>
+        <div className="converts">Centimeters to inches</div>
         <input
           type="number"
           name="number"
@@ -42,9 +42,9 @@ export default function Converter() {
         ></input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-          <output name="res">{Output } inches</output>
+          <output name="res">{Output } </output>
         </div>
-        <div className="converts">Centimeters</div>
+        <div className="converts">Centimeters to meters</div>
         <input
           type="number"
           name="number"
@@ -54,9 +54,9 @@ export default function Converter() {
         </input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-          <output name="res">{Output1 } meters</output>
+          <output name="res">{Output1 } </output>
         </div>
-        <div className="converts">Meters</div>
+        <div className="converts">Meters to Inches</div>
         <input
           type="number"
           name="number"
@@ -66,9 +66,9 @@ export default function Converter() {
         </input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-          <output name="res">{Output2 } Inches</output>
+          <output name="res">{Output2 } </output>
         </div>
-        <div className="converts">Centimeters</div>
+        <div className="converts">Centimeters to Feet</div>
         <input
           type="number"
           name="number"
@@ -78,9 +78,9 @@ export default function Converter() {
         </input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-         <output name="res">{Output3 } Feet</output>
+         <output name="res">{Output3 } </output>
         </div>
-        <div className="converts">Feet</div>
+        <div className="converts">Feet to Centimeters</div>
         <input
           type="number"
           name="number"
@@ -90,9 +90,9 @@ export default function Converter() {
         </input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-         <output name="res">{Output4 } Centimeters</output>
+         <output name="res">{Output4 } </output>
         </div>
-        <div className="converts">Kilometer</div>
+        <div className="converts">Kilometer to Miles</div>
         <input
           type="number"
           name="number"
@@ -102,7 +102,7 @@ export default function Converter() {
         </input>
         <button onClick={Evaluate}>Convert</button>
         <div className="converts">
-         <output name="res">{Output5 } Miles</output>
+         <output name="res">{Output5 } </output>
         </div>
       </div>
     </div>

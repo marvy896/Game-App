@@ -6,6 +6,7 @@ import Converter from "./converter";
 import Todo from "./todo";
 import QuizStart from "./quizStart";
 import Quiz from "./quiz";
+import DiceGame from "./diceGame";
 
 export default function App() {
   let component;
@@ -25,6 +26,9 @@ export default function App() {
       case "/quiz":
       component = <Quiz />;
       break;
+      case "/diceGame":
+        component = <DiceGame />;
+        break;
     case "/about":
       component = <About />;
       break;

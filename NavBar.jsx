@@ -18,6 +18,9 @@ export default function NavBar() {
               <a href ="/quizStart">Quiz</a>
             </li>
             <li>
+              <a href ="/diceGame">Dice</a>
+            </li>
+            <li>
             <a href="/about">About</a>
             </li>
         </ul>
