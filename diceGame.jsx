@@ -7,35 +7,77 @@ import dice5 from "./diceImages/inverted-dice-5.png";
 import dice6 from "./diceImages/dice-six-faces-six.png";
 
 export default function DiceGame() {
-  let Dice = [dice1, dice2, dice3, dice4, dice5, dice6];
-  // let [gameDice,setGameDice] = useState('');
-  //let [gamedice2, setGameDice2] =useState("")
-  
-  let [gameDice, setGameDice] = useState([0, 0, 0,0,0]);
-  function randomSelect() {
-    let dice = [];
+  let Dice = [
+    { img: dice1, face: 1 },
+    { img: dice2, face: 2 },
+    { img: dice3, face: 3 },
+    { img: dice4, face: 4 },
+    { img: dice5, face: 5 },
+    { img: dice6, face: 6 },
+  ];
 
-    for (let index = 0; index < gameDice.length; index++) {
+  let [gameDice, setGameDice] = useState([0, 0, 0, 0, 0]);
+  let [selectedDice, setselectedDice] = useState([]);
+  let [counter, setCounter] = useState(-1);
+
+  function randomSelect() {
+    if (counter == 3) {
+      return setGameover(true) + "winner";
+    }
+    let dice = [];
+    for (const _OldDice of gameDice) {
       let randomIndex = Math.floor(Math.random() * Dice.length);
       dice.push(randomIndex);
     }
     setGameDice(dice);
-
-    console.log(gameDice);
+    setCounter(counter + 1);
+    DiceCombination();
+    console.log(counter);
   }
+
   useEffect(() => {
     randomSelect();
   }, []);
+  let [Total, setTotal] = useState(0);
+  function handleClick(clickedIndex) {
+    let clicked = gameDice.splice(clickedIndex, 1);
+    setselectedDice((prevState) => [...prevState, ...clicked]);
+    console.log(clicked);
+    let num = parseInt(clicked);
+    setTotal(Total + num + 1);
+    setGameDice([...gameDice]);
+  }
+  function DiceCombination(index) {
+    Dice.forEach((Dice) => {
+      for (let key in Dice) {
+        console.log(`${key}: ${Dice[key]}`);
+      }
+    });
+  }
+
   return (
-    <div>
+    <div className="Dice-container">
       <h2>Lets Play the Dice</h2>
       <div>
-        {/* <div>{gameDice}</div> */}
-        {gameDice.map((img, index) => (
-          <img src={Dice[img]} key={index} width="100px" className="DiceImg" />
+        {gameDice.map((i, index) => (
+          <img
+            src={Dice[i]["img"]}
+            key={index}
+            width="100px"
+            onClick={() => handleClick(index)}
+          />
         ))}
-
-        <button onClick={randomSelect}>Roll</button>
+        <div className="diceOutput">
+          {selectedDice.map((i, index) => (
+            <img src={Dice[i]["img"]} key={index} width="100px" />
+          ))}
+        </div>
+        <div className="table-container">
+          <div>Total Score {Total}</div>
+          <button className="buttonDice" onClick={randomSelect}>
+            Roll {counter}
+          </button>
+        </div>
       </div>
     </div>
   );

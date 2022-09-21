@@ -138,7 +138,6 @@ h1{
 .display-Result {
   display: flex;
   justify-content: space-between;
-  
   font-size: larger;
   place-content: center;
   place-items: center;
@@ -449,7 +448,59 @@ h3{
 
 .DiceImg{
   position: flex;
-  z-index: 2;
-  transition: .4s;
-  transform-origin: 50%, 50%;
+}
+.DiceImg-locked{
+  border-color: #ff3333;
+  border-radius: 3px;
+  border: 3px solid red ;
+}
+.Dice-container{
+  align-items: center;
+
+}
+.diceOutput{
+  padding: 10px;
+  width:800px;
+  height: 100px;
+  background-color: #e8460c;
+  border-radius: 20px;
+  place-items: center;
+  margin-left: 150px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 1px 20px gray inset;
+}
+
+.displayDice{
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  place-content: center;
+  place-items: center;
+  background-color: #2f922f;
+  width: 400px;
+  height: 300px;
+}
+
+table, th, td{
+  border: 1px solid black;
+  height: 20px;
+}
+table{
+  width: 300px;
+  text-transform: capitalize;
+
+}
+
+.table-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-content: center;
+  }
+
+.buttonDice{
+  justify-content: center;
+  height: fit-content;
+  width: 100px;
 }
